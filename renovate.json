@@ -1,0 +1,47 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": [
+        "cargo"
+      ],
+      "matchDepTypes": [
+        "dependencies",
+        "dev-dependencies"
+      ],
+      "groupName": "Rust dependencies",
+      "automerge": true,
+      "automergeType": "pr",
+      "matchUpdateTypes": [
+        "patch",
+        "minor"
+      ],
+      "labels": [
+        "dependencies",
+        "dev-dependencies",
+        "automerge"
+      ]
+    },
+    {
+      "matchManagers": [
+        "cargo"
+      ],
+      "matchDepTypes": [
+        "dependencies",
+        "dev-dependencies"
+      ],
+      "groupName": "Rust dependencies major update",
+      "automerge": false,
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "labels": [
+        "dependencies-major"
+      ]
+    }
+  ],
+  "minimumReleaseAge": "3 days",
+  "dependencyDashboard": false
+}

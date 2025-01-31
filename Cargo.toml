@@ -1,0 +1,21 @@
+[package]
+name = "oxiderr"
+version = "0.1.0"
+
+authors = ["Cédric Dumay <cedric.dumay@gmail.com>"]
+description = "Streamlining Error Handling in Rust"
+documentation = "https://docs.rs/oxiderr"
+edition = "2021"
+homepage = "https://github.com/cdumay/oxiderr"
+license-file = "LICENSE"
+readme = "README.md"
+repository = "https://github.com/cdumay/oxiderr"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde-value = "0.7"
+oxiderr-derive = { version = "0.1", optional = true }
+
+[features]
+default = []
+derive = ["oxiderr-derive"]
